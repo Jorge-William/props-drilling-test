@@ -1,6 +1,6 @@
 import React from 'react';
 import Mother from './Mother';
-
+import MyContext from './MyContext';
 class Grandmother extends React.Component {
   constructor(props) {
     super(props);
@@ -19,14 +19,19 @@ class Grandmother extends React.Component {
 
 
   render() {
-
+    const contextValue = {
+      money: this.state.money,
+      spendMoney: this.spendMoney
+    }
     return (
-      <div>
-        <h1>
-          Hello i'm Grandmother
-        </h1>
-        <Mother money={this.state.money} spendMoney={this.spendMoney} />
-      </div>
+      <MyContext.Provider value={contextValue}>
+        <div>
+          <h1>
+            Hello i'm Grandmother
+          </h1>
+          <Mother money={this.state.money} spendMoney={this.spendMoney} />
+        </div>
+      </MyContext.Provider>
     )
   }
 }
