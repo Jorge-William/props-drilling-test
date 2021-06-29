@@ -10,7 +10,7 @@ class Mother extends React.Component {
         <h2>
           Hello i'm Mother
         </h2>
-        <Daugther money={this.props.money} spendMoney={this.props.spendMoney} />
+        <Daugther />
       </div >
     )
   }

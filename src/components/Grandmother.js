@@ -29,7 +29,7 @@ class Grandmother extends React.Component {
           <h1>
             Hello i'm Grandmother
           </h1>
-          <Mother money={this.state.money} spendMoney={this.spendMoney} />
+          <Mother />
         </div>
       </MyContext.Provider>
     )

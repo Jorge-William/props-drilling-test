@@ -9,7 +9,7 @@ class Daugther extends React.Component {
         <h3>
           Hello i'm Daugther
         </h3>
-        <Granddaugther money={this.props.money} spendMoney={this.props.spendMoney} />
+        <Granddaugther />
       </div >
     )
   }
